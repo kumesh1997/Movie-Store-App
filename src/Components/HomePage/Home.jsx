@@ -62,7 +62,7 @@ export const Home=()=>{
     }
 
     function searchByClick(){
-      
+      console.log("clicked");
     }
 
   
@@ -111,7 +111,7 @@ export const Home=()=>{
                                                  <Button 
                                                     children={"Search"}  
                                                     extraTailwindClasses="bg-blue-600 w-20 p-2 text-white font-bold duration-500 hover:scale-95" 
-                                                    className=" inline-block " onClick={searchByClick}/>
+                                                    className=" inline-block " onClick={()=>searchByClick}/>
                                       
                                             </span>
                                         </div>                                    
