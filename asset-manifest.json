@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Movie-Store-App/static/css/main.ef39f096.css",
+    "main.js": "/Movie-Store-App/static/js/main.54e0742b.js",
+    "static/js/787.b7f2204f.chunk.js": "/Movie-Store-App/static/js/787.b7f2204f.chunk.js",
+    "index.html": "/Movie-Store-App/index.html",
+    "main.ef39f096.css.map": "/Movie-Store-App/static/css/main.ef39f096.css.map",
+    "main.54e0742b.js.map": "/Movie-Store-App/static/js/main.54e0742b.js.map",
+    "787.b7f2204f.chunk.js.map": "/Movie-Store-App/static/js/787.b7f2204f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ef39f096.css",
+    "static/js/main.54e0742b.js"
+  ]
+}
