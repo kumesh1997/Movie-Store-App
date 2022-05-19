@@ -18,13 +18,7 @@
 
 
   @media screen and (max-width:780px) {
-    .log{
-      display: flex;
-      position: absolute;
-      top: 15px;
-      left: 35px;
-    }
-
+    
     .nav-links{
       display: none;
     }
@@ -47,7 +41,7 @@
       padding: 15px;
       width: 100%;
       transition: all 0.2s ease;
-      border-bottom: 2px solid rgb(150, 150, 150);
+      border-bottom: 2px solid white;
     }
     .mobile-menu-icon{
       display: block;
