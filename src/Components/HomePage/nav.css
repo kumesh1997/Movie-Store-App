@@ -41,7 +41,7 @@
       padding: 15px;
       width: 100%;
       transition: all 0.2s ease;
-      border-bottom: 2px solid white;
+      border-bottom: 2px solid rgb(145, 145, 145);
     }
     .mobile-menu-icon{
       display: block;
@@ -49,10 +49,10 @@
       font-size: 30px;
       border: none;
       outline: none;
-      top:15px;
-      right: 12px;
+      top:650px;
+      right: 10px;
       color: white;
-      background-color: #0C2647;
+      width: 50px;
 
     }
   }
