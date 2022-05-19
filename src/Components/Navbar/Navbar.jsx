@@ -51,45 +51,48 @@ export const Navbar=()=>{
     return(
         <div id="navbar" className="row bg-navbar-color p-3 w-full fixed">
                           
-                              <div className="container">
-                                   <div className="row flex">
+        <div className="">
+             <div className="row flex">
 
-                                       <div className="col-sm-3 nav-class p-2">
-                                           <ul className=" text-red-600 list-none font-semibold flex justify-center align-middle">
-                                               {                                               
-                                               arr.map((value) => {
-                                                     return(
-                                                     <li className=" list-none mr-3"><a href="#" name={value} className=" no-underline relative p-1" onClick={(e)=>{getData(e.target.name)}}>{value}</a></li>
-                                                            );
-                                                         })
-                                                }
-                                           </ul>
-                                       </div>
+                 <div className="col-sm-8 flex justify-center nav-class">
+                     <ul className=" text-red-600 list-none flex font-medium justify-center align-middle">
+                         {                                               
+                         arr.map((value) => {
+                               return(
+                               <li id="list-item" className=" list-none mr-1"><a href="#" name={value} className=" no-underline relative p-1" onClick={(e)=>{getData(e.target.name)}}>{value}</a></li>
+                                      );
+                                   })
+                          }
 
-                                       <div className="col-sm-7 inline-block text-center">
-                                            <div className=" inline-block col-sm-6">
-                                                <input 
-                                                type={"text"} 
-                                                placeholder="Search your Movie" 
-                                                className="w-full inline-block h-10 rounded-full outline-none pl-4 " 
-                                                onChange={(e)=>{setSearch(e.target.value)}}
-                                                value={search} onKeyPress={searchMovie}/>
-                                            </div>
-                                         
-                                            <span className=" inline-block">
-                                                 <Button 
-                                                    children={"Search"}  
-                                                    extraTailwindClasses="bg-blue-600 w-20 text-white font-bold duration-500 hover:scale-95" 
-                                                    className=" inline-block " />
-                                        {/* <button type="button" className=" bg-red-900" onClick={searchMovie}>Search</button> */}
-                                            </span>
-                                        </div>
-                                        
-                                        <div className="col-sm-2">
-                                              <a href="/add"><Button children={"Add New"} extraTailwindClasses="bg-red-600 text-white font-bold outline-none duration-500 hover:scale-95" /></a>
-                                        </div>
-                                    </div>
-                                </div>                           
-                        </div>
+                          
+                     </ul>
+                     <ul><li className=" bg-red-600 text-white rounded-full p-1 "><a href="/add">+ New</a></li></ul>
+                 </div>
+
+                 <div className="col-sm-4 flex justify-center text-center">
+                      <div className=" inline-block col-sm-6">
+                          <input 
+                          type={"text"} 
+                          placeholder="Search your Movie" 
+                          className="w-full inline-block h-10 rounded-full outline-none pl-4 " 
+                          onChange={(e)=>{setSearch(e.target.value)}}
+                          value={search} onKeyPress={searchMovie}/>
+                      </div>
+                   
+                      <span className=" inline-block">
+                           <Button 
+                              children={"Search"}  
+                              extraTailwindClasses="bg-blue-600 w-20 p-2 text-white font-bold duration-500 hover:scale-95" 
+                              className=" inline-block " />
+                  {/* <button type="button" className=" bg-red-900" onClick={searchMovie}>Search</button> */}
+                      </span>
+                  </div>
+                  
+                  {/* <div className="col-sm-2 flex justify-end p-1">
+                        <a href="/add"><Button children={"Add New"} extraTailwindClasses="bg-red-600 text-white font-bold outline-none duration-500 hover:scale-95" /></a>
+                  </div> */}
+              </div>
+          </div>                           
+  </div>
     );
 }
