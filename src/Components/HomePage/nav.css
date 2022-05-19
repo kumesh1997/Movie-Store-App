@@ -1,4 +1,4 @@
-.nav-class ul li a:focus{
+.nav-class ul #list-item a:focus{
   background-color: white;
   opacity:0.2px;
   border-radius: 20px;
