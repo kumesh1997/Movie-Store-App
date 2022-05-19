@@ -8,7 +8,7 @@ function Card(card){
     console.log(card.info);
     let img_path="https://image.tmdb.org/t/p/w500";
     return(
-        <div id="card" className=" w-full  h-70  bg-green-200 shadow-lg duration-500 box-border border-2 ">
+        <div id="card" className=" w-full  h-70  bg-white shadow-lg duration-500 box-border border-2 ">
             <img src={img_path+card.info.poster_path} alt="Image" className=" w-full h-70  max-h-70" />
     
             <div id="card-body" className=" flex flex-col justify-center align-middle">
