@@ -1,6 +1,7 @@
 import React from "react";
 import Searchbar from "../BaseComponents/Searchbar";
 import Button from "../BaseComponents/Button";
+import '../AddMovie/addMovie.css';
 
 
 export const AddMovie=()=>{
@@ -9,7 +10,7 @@ export const AddMovie=()=>{
             <div className="container">
                 
                 <div className="row flex justify-center bg-navbar-color">
-                        <form className=" p-3 w-2/3 h-auto mt-14 mb-16 shadow-lg bg-white rounded-md sm: p-0">
+                        <form className=" p-3 w-2/3 h-auto mt-14 mb-16 shadow-lg bg-white rounded-md">
                           
                             <h1 className=" text-xl font-bold text-blue-600 mb-4"> Add a New Movie</h1>
                             <div className="row">
