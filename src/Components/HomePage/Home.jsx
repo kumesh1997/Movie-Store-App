@@ -5,10 +5,13 @@ import Searchbar from '../BaseComponents/Searchbar';
 import MovieTitle from '../BaseComponents/MovieTitle';
 import Rate from "../BaseComponents/Rate";
 import Card from "../BaseComponents/Card";
+import '../HomePage/nav.css';
+import { getDefaultNormalizer } from "@testing-library/react";
 
 let API_key="&api_key=e43774324ace39f0ad0187ca97c1d4e9";
 let base_url="https://api.themoviedb.org/3";
 let url=base_url+"/discover/movie?sort_by=popularity.desc"+API_key;
+let arr=["Popular","Theatre","Kids","Drama","Comedie"];
 
 export const Home=()=>{
     const [movieData,setData]=useState([]);
@@ -20,6 +23,27 @@ export const Home=()=>{
            setData(data.results);
         });
     }, [url_set])
+
+
+    const getData=(movieType)=>{
+        if(movieType=="Popular"){
+            url=base_url+"/discover/movie?sort_by=popularity.desc"+API_key;
+        }
+        if(movieType=="Theatre"){
+            url=base_url+"/discover/movie?primary_release_date.gte=2014-09-15&primary_release_date.lte=2014-10-22"+API_key;
+        }
+        if(movieType=="Kids"){
+            url=base_url+"/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc"+API_key;
+        }
+        if(movieType=="Drama"){
+            url=base_url+"/discover/movie?with_genres=18&primary_release_year=2014"+API_key;
+        }
+        if(movieType=="Comedie"){
+            url=base_url+"/discover/movie?with_genres=35&with_cast=23659&sort_by=revenue.desc"+API_key;
+        }
+
+        setUrl(url);
+    }
 
 
     
@@ -41,7 +65,22 @@ export const Home=()=>{
                           
                               <div className="container">
                                    <div className="row flex">
-                                       <div className="col-sm-10 inline-block text-center">
+
+                                       <div className="col-sm-3 nav-class">
+                                           <ul className=" text-red-600 list-none font-semibold flex justify-center align-middle">
+                                               {
+                                               
+                                               arr.map((value) => {
+                                                     return(
+                                                     <li className=" list-none mr-3"><a href="#" name={value} className=" no-underline relative p1" onClick={(e)=>{getData(e.target.name)}}>{value}</a></li>
+                                                     );
+                                               })
+
+                                              }
+                                           </ul>
+                                       </div>
+
+                                       <div className="col-sm-7 inline-block text-center">
                                             <div className=" inline-block col-sm-6">
                                                 <input 
                                                 type={"text"} 
@@ -68,7 +107,7 @@ export const Home=()=>{
                         </div>
 
 
-                        <div className="row flex justify-evenly">
+                        <div className="row top-16 bg-black p-4">
 
                            {/* <div className="col-sm-3 mt-2"><Card movie="M1" cast="C1" translation="EN,FRN,SIN"/></div>
                            <div className="col-sm-3 mt-2"><Card movie="M2" cast="C2" translation="EN," /></div>

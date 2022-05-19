@@ -1,0 +1,12 @@
+.nav-class ul li a:focus{
+  background-color: white;
+  opacity:0.2px;
+  border-radius: 20px;
+
+}
+
+.nav-class ul li a:active{
+    color: black;
+    text-decoration: none;
+  
+  }
