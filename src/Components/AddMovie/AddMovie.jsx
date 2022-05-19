@@ -8,8 +8,8 @@ export const AddMovie=()=>{
         <div id="movie-form" className="">
             <div className="container">
                 
-                <div className="row flex justify-center">
-                        <form className=" p-3 w-2/3 h-auto mt-14 shadow-lg bg-white rounded-md">
+                <div className="row flex justify-center bg-navbar-color">
+                        <form className=" p-3 w-2/3 h-auto mt-14 mb-16 shadow-lg bg-white rounded-md">
                           
                             <h1 className=" text-xl font-bold text-blue-600 mb-4"> Add a New Movie</h1>
                             <div className="row">
@@ -59,10 +59,10 @@ export const AddMovie=()=>{
         
                             <div className="text-center flex justify-center row">
                                 <div className="col-sm-3">
-                                <a href="#"><Button children={"Back"}  extraTailwindClasses="bg-gray-400 text-white font-bold mt-3 h-10 w-32" className=" inline-block"/></a>
+                                <a href="/"><Button children={"Back"}  extraTailwindClasses="bg-gray-400 text-white font-bold mt-3 h-10 w-32" className=" inline-block"/></a>
                                 </div>
                                 <div className="col-sm-3">
-                                <Button children={"Save"}  extraTailwindClasses="bg-green-600 text-white font-bold mt-3 h-auto w-32" className=" inline-block"/>
+                                <Button children={"Save"}  extraTailwindClasses="bg-green-600 text-white p-2 font-bold mt-3 h-auto w-32" className=" inline-block"/>
                                 </div>                           
                             </div>
                         </form>
